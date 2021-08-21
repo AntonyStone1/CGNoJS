@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <input id="menu__toggle" type="checkbox"/>
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <header class="header">
+            <div class="container">
+                <div class="header__body">                        
+                    <div class="profile">
+                        <a class="profile__link" href="#">
+                            <img class="profile__link-img" src="img/profile/profile__lordan.png" alt="Profile icon">
+                            <p>@lordan</p>
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li><a href="#" class="menu__item menu__browse menu__item_active">Browse</a></li>
+                            <li><a href="#" class="menu__item menu__radio">Radio</a></li>
+                            <li><a href="#" class="menu__item menu__friends">Friends</a></li>
+                            <li class="menu__item-playlist"><a href="#" class=" menu__item-arrow">Playlists</a>
+                            <ul class="menu__sub-list">
+                                <li>Playlists</li>
+                                <li>Playlists</li>
+                                <li>Playlists</li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>            
+        </header>
+        
+        <main class="main">
+            <div class="main__container">
+                <progress class="main__song-progress" max="100" value="25"> </progress>  
+                <div class="main__img">
+                    <img src="img/song/main .png" alt="Song title">
+                </div>
+                <div class="control">
+                    <div class="control__buttons">
+                        <button class="control__button"><img src="img/icons/music_arrow-left.png" alt=""></button>
+                        <button class="control__button"><img src="img/icons/pause.png" alt=""></button>
+                        <button class="control__button"><img src="img/icons/music_arrow.png" alt=""></button>
+                    </div>
+                    <div class="control__volume-buttons">
+                        <button class="constrol__volume-btn"><img src="/img/icons/volume_down.png" alt=""></button>
+                        <input class="constrol__volume-range" type="range" value="25" step="1" min="0" max="100">
+                        <button class="constrol__volume-btn"><img src="/img/icons/volume_up.png" alt=""></button>
+                    </div>
+                </div>
+            </div>        
+            <section class="tracklist">
+                <div class="wrapp">
+                    <ul class="tracklist__list">
+                        <li class="tracklist__item">
+                            <p>1. Dreaming</p>
+                            <p>Dead by april</p>
+                        </li>
+                        <li class="tracklist__item tracklist__item_active">
+                            <p>2. Real & True</p>
+                            <p>Dead by april</p>
+                        </li>
+                        <li class="tracklist__item">
+                            <p>3. Within my haert</p>
+                            <p>Dead by april</p>
+                        </li>
+                        <li class="tracklist__item">
+                            <p>4. More than yestarday</p>
+                            <p>Dead by april</p>
+                        </li>
+                        <li class="tracklist__item">
+                            <p>5. Calling</p>
+                            <p>Dead by april</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>    
+</body>
+</html>

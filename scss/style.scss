@@ -1,0 +1,450 @@
+@import 'fonts';
+
+html {
+    box-sizing: border-box;
+}
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+  text-decoration: none;  
+}
+
+body {
+    font-family: 'Roboto-Regular', 'Arial', sans-serif;
+    font-weight: 400;
+    min-width: 320px;
+    background-color: rgba(38, 38, 38, 1);
+    overflow-x: hidden;
+    z-index: 50;
+}
+
+
+/* sidebar */
+.container {
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;    
+}
+.header {
+    position: fixed;
+    width: 300px;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s ease;
+    background-color: rgba(38, 38, 38, 0.99);
+    box-shadow: 0px 1px 15px -5px #000;
+    z-index: 2;
+}
+.profile {
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-img {
+            width: 70px;
+            border-radius: 50%;
+            margin: 20px;
+        }
+    }
+    &__link p {
+        margin-bottom: 50px;   }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    line-height: 3em;
+    &__item {
+        position: relative;
+        left: -20px;
+        display: block;
+        width: 300px;
+    }
+    &__item:hover {
+        background-color: rgba(64, 64, 64, 1);
+        box-shadow: 
+        inset 0px 2px 2px -2px red,
+        inset 0px -2px 2px -2px red;
+    } 
+    &__list, &__sub-list {
+        list-style: none;
+    }    
+    &__sub-list li::before {
+        padding-right: 20px;
+        font-size: 10px;
+        color: #999;
+        content: "●";
+        text-align: center;
+    }
+    
+    &__browse:before {
+        content: "";
+        background: url(../img/icons/browse__icon.png);
+        display: inline-block;
+        margin: 0 17px 0 15px;
+        max-width: 100%;
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    &__radio:before {
+        content: "";
+        background: url(../img/icons/radio__icon.png);
+        display: inline-block;
+        margin: 0 19px 0 15px;
+        max-width: 100%;
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }    
+    &__friends:before {
+        content: "";
+        background: url(../img/icons/friends__icon.png);
+        display: inline-block;
+        margin: 0 15px 0 19px;
+        max-width: 100%;
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    &__item-playlist:before {
+        content: "";
+        background: url(../img/icons/music__icon.png);
+        display: inline-block;
+        margin: 0 20px 0 20px;
+        max-width: 100%;
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    &__item-playlist {
+        position: relative;
+        left: -20px;
+        width: 300px;
+        background-color: rgba(28, 28, 28, 0.9);
+    }
+    &__item-arrow:after {
+        content: "";
+        background: url(../img/icons/palylist_arrow.png);
+        position: absolute;
+        left: 85%;
+        top: 10%;
+        background-size: cover;
+        height: 8px;
+        width: 16px;
+        border-radius: 50%;
+        margin-right: 5px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    &__sub-list li {
+        color: white;
+        padding-left: 60px;
+        transition: all 0.3s ease;
+    }
+    &__sub-list li:hover {
+        background-color: rgba(64, 64, 64, 1);
+        box-shadow: 
+        0px 1px 10px -5px #000, 
+        inset 0px 4px 6px -8px #fff;
+        cursor: pointer;
+    }
+}
+
+.menu__sub-list_active {
+    display: none;   
+}
+
+/* burger */
+
+
+.header__burger:before {
+    top: 0;
+}
+.header__burger:after {
+    bottom: 0;
+}
+.header__burger span {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    top: 6px;
+}
+.menu__item_active {
+    position: relative;
+    left: -20px;
+    width: 300px;
+    background-color: rgba(28, 28, 28, 0.8);
+    box-shadow: 
+        inset 0px 2px 2px -2px red,
+        inset 0px -2px 2px -2px red,
+        inset 5px 0px 3px -3px red;
+}
+
+
+/* main */
+
+
+.main {    
+    width: 100%;    
+    &__img {
+        height: 233px;
+        overflow: hidden;
+    }
+    &__img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    &__song-progress {
+        position: relative;
+        top: 240px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: #fff;
+    }    
+}
+.main__container {
+    position: relative;
+    top: -18px;
+}
+
+progress::-webkit-progress-bar {
+    background: red;
+    }
+progress::-webkit-progress-value {
+    background: #fff;
+    }
+
+.control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    height: 90px;
+    background-color: red;
+    box-shadow: 0px 1px 10px -5px #000;
+    &__buttons, &__volume-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 190px;        
+    }
+    &__volume-buttons {
+        width: 200px;
+    }
+}
+.control__button, .constrol__volume-btn {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.constrol__volume-range {
+    -webkit-appearance: none;
+    width: 150px;
+    height: 2px;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+.constrol__volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;   
+}
+
+
+
+/* Tracklist */
+
+.tracklist {
+    &__list li {
+        padding: 10px 15px;
+        list-style: none;
+        color: #fff;
+    }
+    &__item p {
+        padding: 3px;
+    }
+    &__item p:last-child {
+        color: rgb(104, 102, 102);
+        padding-left: 20px;
+    }
+    &__item:hover {
+        background-color: rgba(64, 64, 64, 1);
+        box-shadow: 
+        0px 1px 10px -5px #000, 
+        inset 0px 4px 6px -8px #fff;
+        cursor: pointer;
+    }
+}
+
+.tracklist__item_active {
+    background-color: rgba(64, 64, 64, 1);
+    box-shadow: 
+        0px 1px 10px -5px #000, 
+        inset 0px 4px 6px -8px #fff,
+        inset 5px 0px 3px -3px red;
+    
+}
+
+
+
+
+
+/* CSS burger */
+
+#menu__toggle {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .header {
+    position: relative;
+    display: block;
+    left: 0;
+  }
+
+  #menu__toggle:checked ~ .main {
+    position: fixed;
+    top: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+  
+    width: 26px;
+    height: 26px;
+  
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color: #fff;
+  
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  
+  
+  
+  /* Media */
+
+
+@media (min-width: 470px) {
+    .wrapper {
+        display: flex;
+    }
+    .header {
+        width: 300px;
+    }
+    .profile__link-img {
+        margin: 0 0 15px;        
+    }
+    .profile__link p {
+        margin-bottom: 10px;
+    }
+    .menu__item_active, .menu__item-playlist {
+        width: 300px;
+    }     
+    
+    #menu__toggle:checked ~ .main {
+        position: fixed;
+      }
+    .main {
+        display: flex;
+        &__container {
+            width: 100%;
+        }        
+    }    
+    .control {
+        box-shadow: 0px 0px 15px 1px #000;
+        z-index: 10;
+    }
+    .tracklist {
+        width: 75%;
+    }
+}
+@media (min-width: 660px) {
+    .menu__btn {
+        display: none;
+    }
+    .header {
+        position: relative;
+        left: 0;
+    }    
+    .main {
+        position: relative;
+        &__img {
+            height: 50%;
+        }
+        &__song-progress {
+            top: 51%;
+        }
+    }
+}
+@media (min-width: 1400px) {
+    .tracklist {
+        width: 20%;
+    }
+    .main__song-progress {
+        top: 50.5%;
+    }
+}
+
+  
+  
