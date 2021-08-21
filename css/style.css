@@ -106,7 +106,7 @@ body {
   position: relative;
   left: -20px;
   display: block;
-  width: 300px;
+  width: 255px;
 }
 
 .menu__item:hover {
@@ -191,7 +191,7 @@ body {
   background: url(../img/icons/palylist_arrow.png);
   position: absolute;
   left: 85%;
-  top: 10%;
+  top: 5%;
   background-size: cover;
   height: 8px;
   width: 16px;
@@ -457,7 +457,7 @@ progress::-webkit-progress-value {
     display: flex;
   }
   .header {
-    width: 300px;
+    width: 255px;
   }
   .profile__link-img {
     margin: 0 0 15px;
@@ -466,7 +466,7 @@ progress::-webkit-progress-value {
     margin-bottom: 10px;
   }
   .menu__item_active, .menu__item-playlist {
-    width: 300px;
+    width: 255px;
   }
   #menu__toggle:checked ~ .main {
     position: fixed;
@@ -501,10 +501,10 @@ progress::-webkit-progress-value {
     position: relative;
   }
   .main__img {
-    height: 50%;
+    height: 35%;
   }
   .main__song-progress {
-    top: 51%;
+    top: 36%;
   }
 }
 
@@ -513,7 +513,7 @@ progress::-webkit-progress-value {
     width: 20%;
   }
   .main__song-progress {
-    top: 50.5%;
+    top: 35.4%;
   }
 }
 /*# sourceMappingURL=style.css.map */

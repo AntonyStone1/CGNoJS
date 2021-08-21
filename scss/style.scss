@@ -63,7 +63,7 @@ body {
         position: relative;
         left: -20px;
         display: block;
-        width: 300px;
+        width: 255px;
     }
     &__item:hover {
         background-color: rgba(64, 64, 64, 1);
@@ -141,7 +141,7 @@ body {
         background: url(../img/icons/palylist_arrow.png);
         position: absolute;
         left: 85%;
-        top: 10%;
+        top: 5%;
         background-size: cover;
         height: 8px;
         width: 16px;
@@ -320,77 +320,73 @@ progress::-webkit-progress-value {
 #menu__toggle {
     position: absolute;
     opacity: 0;
-  }
-  
-  #menu__toggle:checked ~ .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .header {
-    position: relative;
-    display: block;
-    left: 0;
-  }
+}
 
-  #menu__toggle:checked ~ .main {
-    position: fixed;
-    top: 0;
-  }
-  
-  .menu__btn {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-  
-    width: 26px;
-    height: 26px;
-  
-    cursor: pointer;
-    z-index: 3;
-  }
-  
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-  
-    width: 100%;
-    height: 2px;
-  
-    background-color: #fff;
-  
-    transition-duration: .25s;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-  }
-  
-  
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .header {
+  position: relative;
+  display: block;
+  left: 0;
+}
+#menu__toggle:checked ~ .main {
+  position: fixed;
+  top: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 3;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #fff;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}  
   
   /* Media */
-
 
 @media (min-width: 470px) {
     .wrapper {
         display: flex;
     }
     .header {
-        width: 300px;
+        width: 255px;
     }
     .profile__link-img {
         margin: 0 0 15px;        
@@ -399,7 +395,7 @@ progress::-webkit-progress-value {
         margin-bottom: 10px;
     }
     .menu__item_active, .menu__item-playlist {
-        width: 300px;
+        width: 255px;
     }     
     
     #menu__toggle:checked ~ .main {
@@ -430,21 +426,19 @@ progress::-webkit-progress-value {
     .main {
         position: relative;
         &__img {
-            height: 50%;
+            height: 35%;
         }
         &__song-progress {
-            top: 51%;
+            top: 36%;
         }
-        
     }
-    
 }
 @media (min-width: 1400px) {
     .tracklist {
         width: 20%;
     }
     .main__song-progress {
-        top: 50.5%;
+        top: 35.4%;
     }
 }
 
